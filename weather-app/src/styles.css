@@ -1,0 +1,22 @@
+.container1 {
+  text-align: center;
+  padding-top: 50px;
+}
+.container {
+  margin-left: 140px;
+}
+.form {
+  position: relative;
+  top: 10px;
+  left: 350px;
+}
+.col-2 {
+  text-align: center;
+}
+.day {
+  font-weight: bolder;
+}
+
+.ul {
+  text-align: center;
+}
