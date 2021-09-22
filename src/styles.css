@@ -1,6 +1,7 @@
 .container1 {
   text-align: center;
   padding-top: 50px;
+  border-radius: 10px;
 }
 .container {
   margin-left: 140px;
@@ -8,7 +9,7 @@
 .form {
   position: relative;
   top: 10px;
-  left: 350px;
+  left: 20px;
 }
 .col-2 {
   text-align: center;
@@ -19,4 +20,11 @@
 
 .ul {
   text-align: center;
+}
+.currentLoc {
+  border-radius: 5px;
+  border-width: 1px;
+}
+.link {
+  padding-left: 530px;
 }
