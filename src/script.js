@@ -39,7 +39,7 @@ function getCurrentWeather(response) {
 }
 
 function search(city) {
-  let apiKey = "";
+  let apiKey = "a9ce9e46c1cda5b3cfe7f2ec2a3bfb08";
   let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&units=metric&appid=${apiKey}`;
   axios.get(apiUrl).then(getCurrentWeather);
 }
@@ -53,7 +53,7 @@ let form = document.querySelector("#search-form");
 form.addEventListener("submit", handleSumbit);
 
 function searchSpot(position) {
-  let apiKey = "";
+  let apiKey = "a9ce9e46c1cda5b3cfe7f2ec2a3bfb08";
   let apiUrl = `https://api.openweathermap.org/data/2.5/weather?lat=${position.coords.latitude}&lon=${position.coords.longitude}&units=metric&appid=${apiKey}`;
   axios.get(apiUrl).then(getCurrentWeather);
 }
