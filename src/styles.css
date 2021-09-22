@@ -4,7 +4,7 @@
   border-radius: 10px;
 }
 .container {
-  margin-left: 140px;
+  margin-left: 90px;
 }
 .form {
   position: relative;
@@ -26,8 +26,15 @@
   border-width: 1px;
 }
 .link {
-  padding-left: 530px;
+  padding-left: 550px;
 }
 .temp {
   font-size: xx-large;
+}
+.wrap {
+  max-width: 600px;
+  border: 1px solid;
+  border-color: black;
+  border-radius: 15px;
+  margin: 20px auto;
 }
