@@ -34,7 +34,10 @@
 .wrap {
   max-width: 600px;
   border: 1px solid;
-  border-color: black;
+  border-color: grey;
   border-radius: 15px;
   margin: 20px auto;
+}
+.sky {
+  font-size: 20px;
 }
