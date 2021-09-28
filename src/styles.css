@@ -38,9 +38,12 @@
   border-radius: 15px;
   margin: 20px auto;
 }
-.sky {
+.icon {
   font-size: 20px;
 }
 .degree {
   text-decoration: none;
+}
+.descriptionI:first-letter {
+  text-transform: capitalize;
 }
