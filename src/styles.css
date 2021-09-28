@@ -47,3 +47,6 @@
 .descriptionI:first-letter {
   text-transform: capitalize;
 }
+.degree {
+  cursor: default;
+}
