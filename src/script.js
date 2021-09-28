@@ -25,10 +25,9 @@ let day = days[now.getDay()];
 
 h2.innerHTML = `${day} ${hours}:${minutes}`;
 function getCurrentWeather(response) {
+  celsiusValue = Math.round(response.data.main.temp);
   document.querySelector("#city").innerHTML = response.data.name;
-  document.querySelector("#temperature").innerHTML = Math.round(
-    response.data.main.temp
-  );
+  document.querySelector("#temperature").innerHTML = Math.round(celsiusValue);
   document.querySelector("#humidity").innerHTML = response.data.main.humidity;
   document.querySelector("#wind").innerHTML = Math.round(
     response.data.wind.speed
@@ -69,11 +68,20 @@ currentSpotButton.addEventListener("click", searchCurrentSpot);
 
 search("Santiago");
 
-let fahretheiConvert = document.querySelector("#fahrenheit");
-fahretheiConvert.addEventListener("click", convertToFahrenheit);
-
 function convertToFahrenheit(event) {
   event.preventDefault();
-  let fahrenheitValue = (14 * 9) / 5 + 32;
-  alert(fahrenheitValue);
+  let temperatureElement = document.querySelector("#temperature");
+  let fahrenheitValue = (celsiusValue * 9) / 5 + 32;
+  temperatureElement.innerHTML = Math.round(fahrenheitValue);
 }
+function convertToCelsius(event) {
+  event.preventDefault();
+  let temperatureElement = document.querySelector("#temperature");
+  temperatureElement.innerHTML = celsiusValue;
+}
+
+let fahrenheitConvert = document.querySelector("#fahrenheit");
+fahrenheitConvert.addEventListener("click", convertToFahrenheit);
+
+let celsiusLink = document.querySelector("#celsius");
+celsiusLink.addEventListener("click", convertToCelsius);
