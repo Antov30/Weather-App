@@ -36,10 +36,7 @@ function getCurrentWeather(response) {
   document.querySelector("#description").innerHTML =
     response.data.weather[0].description;
   let iconElement = document.querySelector("#icon");
-  iconElement.setAttribute(
-    "src",
-    `https://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
-  );
+  iconElement.setAttribute("src");
 }
 
 function search(city) {
@@ -71,3 +68,12 @@ let currentSpotButton = document.querySelector("#current-location");
 currentSpotButton.addEventListener("click", searchCurrentSpot);
 
 search("Santiago");
+
+let fahretheiConvert = document.querySelector("#fahrenheit");
+fahretheiConvert.addEventListener("click", convertToFahrenheit);
+
+function convertToFahrenheit(event) {
+  event.preventDefault();
+  let fahrenheitValue = (14 * 9) / 5 + 32;
+  alert(fahrenheitValue);
+}
